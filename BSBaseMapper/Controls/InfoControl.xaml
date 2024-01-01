@@ -7,60 +7,68 @@
              mc:Ignorable="d" 
              d:Background="White" DataContext="{Binding RelativeSource={RelativeSource Self}}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,5,5">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Version</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song Name</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song Sub-Name</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song Author Name</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Level Author Name</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">BPM</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Shuffle</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Shuffle Period</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Preview Start Time</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Preview Duration</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song File Name</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Cover Image File Name</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Environment Name</TextBlock>
-            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song Time Offset</TextBlock>
-        </StackPanel>
-        <StackPanel  Grid.Column="1" Orientation="Horizontal">
-            <StackPanel x:Name="stackPanelLabels" d:Visibility="Visible" Visibility="Visible">
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockVersion" d:Text="[Version]" Text="{Binding RootInfoObject._version}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongName" d:Text="[Song Name]" Text="{Binding RootInfoObject._songName}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongSubName" d:Text="[Song Sub-Name]" Text="{Binding RootInfoObject._songSubName}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongAuthorName" d:Text="[Song Author Name]" Text="{Binding RootInfoObject._songAuthorName}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockLevelAuthorName" d:Text="[Level Author Name]" Text="{Binding RootInfoObject._levelAuthorName}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockBPM" d:Text="[BPM]" Text="{Binding RootInfoObject._beatsPerMinute}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockShuffle" d:Text="[Shuffle]" Text="{Binding RootInfoObject._shuffle}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockShufflePeriod" d:Text="[Shuffle Period]" Text="{Binding RootInfoObject._shufflePeriod}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockPreviewStartTime" d:Text="[Preview Start Time]" Text="{Binding RootInfoObject._previewStartTime}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockPreviewDuration" d:Text="[Preview Duration]" Text="{Binding RootInfoObject._previewDuration}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongFileName" d:Text="[Song File Name]" Text="{Binding RootInfoObject._songFilename}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockCoverImageFileName" d:Text="[Cover Image File Name]" Text="{Binding RootInfoObject._coverImageFilename}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockEnvironmentName" d:Text="[Environment Name]" Text="{Binding RootInfoObject._environmentName}"></TextBlock>
-                <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongTimeOffset" d:Text="[Song Time Offset]" Text="{Binding RootInfoObject._songTimeOffset}"></TextBlock>
+        <StackPanel Orientation="Vertical">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Version</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song Name</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song Sub-Name</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song Author Name</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Level Author Name</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">BPM</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Shuffle</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Shuffle Period</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Preview Start Time</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Preview Duration</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song File Name</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Cover Image File Name</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Environment Name</TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Song Time Offset</TextBlock>
             </StackPanel>
-            <StackPanel x:Name="stackPanelControls" d:Visibility="Visible" Visibility="Collapsed">
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxVersion" d:Text="[Version]" Text="{Binding RootInfoObject._version}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongName" d:Text="[Song Name]" Text="{Binding RootInfoObject._songName}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongSubName" d:Text="[Song Sub-Name]" Text="{Binding RootInfoObject._songSubName}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongAuthorName" d:Text="[Song Author Name]" Text="{Binding RootInfoObject._songAuthorName}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxLevelAuthorName" d:Text="[Level Author Name]" Text="{Binding RootInfoObject._levelAuthorName}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxBPM" d:Text="[BPM]" Text="{Binding RootInfoObject._beatsPerMinute, StringFormat=\{0:F0\}}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxShuffle" d:Text="[Shuffle]" Text="{Binding RootInfoObject._shuffle}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxShufflePeriod" d:Text="[Shuffle Period]" Text="{Binding RootInfoObject._shufflePeriod, StringFormat=\{0:F1\}}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxPreviewStartTime" d:Text="[Preview Start Time]" Text="{Binding RootInfoObject._previewStartTime}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxPreviewDuration" d:Text="[Preview Duration]" Text="{Binding RootInfoObject._previewDuration, StringFormat=\{0:F0\}}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongFileName" d:Text="[Song File Name]" Text="{Binding RootInfoObject._songFilename}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxCoverImageFileName" d:Text="[Cover Image File Name]" Text="{Binding RootInfoObject._coverImageFilename}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxEnvironmentName" d:Text="[Environment Name]" Text="{Binding RootInfoObject._environmentName}"></TextBox>
-                <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongTimeOffset" d:Text="[Song Time Offset]" Text="{Binding RootInfoObject._songTimeOffset, StringFormat=\{0:F0\}}"></TextBox>
+            <StackPanel  Grid.Column="1" Orientation="Horizontal">
+                <StackPanel x:Name="stackPanelLabels" d:Visibility="Visible" Visibility="Visible">
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockVersion" d:Text="[Version]" Text="{Binding RootInfoObject._version}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongName" d:Text="[Song Name]" Text="{Binding RootInfoObject._songName}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongSubName" d:Text="[Song Sub-Name]" Text="{Binding RootInfoObject._songSubName}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongAuthorName" d:Text="[Song Author Name]" Text="{Binding RootInfoObject._songAuthorName}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockLevelAuthorName" d:Text="[Level Author Name]" Text="{Binding RootInfoObject._levelAuthorName}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockBPM" d:Text="[BPM]" Text="{Binding RootInfoObject._beatsPerMinute}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockShuffle" d:Text="[Shuffle]" Text="{Binding RootInfoObject._shuffle}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockShufflePeriod" d:Text="[Shuffle Period]" Text="{Binding RootInfoObject._shufflePeriod}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockPreviewStartTime" d:Text="[Preview Start Time]" Text="{Binding RootInfoObject._previewStartTime}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockPreviewDuration" d:Text="[Preview Duration]" Text="{Binding RootInfoObject._previewDuration}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongFileName" d:Text="[Song File Name]" Text="{Binding RootInfoObject._songFilename}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockCoverImageFileName" d:Text="[Cover Image File Name]" Text="{Binding RootInfoObject._coverImageFilename}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockEnvironmentName" d:Text="[Environment Name]" Text="{Binding RootInfoObject._environmentName}"></TextBlock>
+                    <TextBlock d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBlockSongTimeOffset" d:Text="[Song Time Offset]" Text="{Binding RootInfoObject._songTimeOffset}"></TextBlock>
+                </StackPanel>
+                <StackPanel x:Name="stackPanelControls" d:Visibility="Visible" Visibility="Collapsed">
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxVersion" d:Text="[Version]" Text="{Binding RootInfoObject._version}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongName" d:Text="[Song Name]" Text="{Binding RootInfoObject._songName}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongSubName" d:Text="[Song Sub-Name]" Text="{Binding RootInfoObject._songSubName}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongAuthorName" d:Text="[Song Author Name]" Text="{Binding RootInfoObject._songAuthorName}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxLevelAuthorName" d:Text="[Level Author Name]" Text="{Binding RootInfoObject._levelAuthorName}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxBPM" d:Text="[BPM]" Text="{Binding RootInfoObject._beatsPerMinute, StringFormat=\{0:F0\}}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxShuffle" d:Text="[Shuffle]" Text="{Binding RootInfoObject._shuffle}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxShufflePeriod" d:Text="[Shuffle Period]" Text="{Binding RootInfoObject._shufflePeriod, StringFormat=\{0:F1\}}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxPreviewStartTime" d:Text="[Preview Start Time]" Text="{Binding RootInfoObject._previewStartTime}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxPreviewDuration" d:Text="[Preview Duration]" Text="{Binding RootInfoObject._previewDuration, StringFormat=\{0:F0\}}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongFileName" d:Text="[Song File Name]" Text="{Binding RootInfoObject._songFilename}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxCoverImageFileName" d:Text="[Cover Image File Name]" Text="{Binding RootInfoObject._coverImageFilename}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxEnvironmentName" d:Text="[Environment Name]" Text="{Binding RootInfoObject._environmentName}"></TextBox>
+                    <TextBox d:Foreground="Black" Margin="5,2,0,0" Height="20" x:Name="textBoxSongTimeOffset" d:Text="[Song Time Offset]" Text="{Binding RootInfoObject._songTimeOffset, StringFormat=\{0:F0\}}"></TextBox>
+                </StackPanel>
             </StackPanel>
+        </Grid>
+        <Grid>
+                <local:DifficultyBeatmapSetContainerControl >
+                    
+                </local:DifficultyBeatmapSetContainerControl>
+            </Grid>
         </StackPanel>
-
     </Grid>
 </UserControl>

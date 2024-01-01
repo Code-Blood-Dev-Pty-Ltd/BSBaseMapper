@@ -18,11 +18,11 @@ using System.Windows.Shapes;
 namespace BSBaseMapper.Controls
 {
     /// <summary>
-    /// Interaction logic for InfoControl.xaml
+    /// Interaction logic for DifficultyBeatmapSetControl.xaml
     /// </summary>
-    public partial class InfoControl : UserControl
+    public partial class DifficultyBeatmapSetControl : UserControl
     {
-        public RootInfoObject RootInfoObject { get; set; }
+        public DifficultyBeatmap DifficultyBeatmapObject { get; set; }
 
         private EFileMode fileMode;
         public EFileMode FileMode
@@ -48,17 +48,16 @@ namespace BSBaseMapper.Controls
             }
         }
 
-        public InfoControl(RootInfoObject rootInfoObject)
+        public DifficultyBeatmapSetControl(DifficultyBeatmap difficultyBeatmap)
         {
-            RootInfoObject = rootInfoObject;
-            Initialized += InfoControl_Initialized;
-            InitializeComponent();            
+            DifficultyBeatmapObject = difficultyBeatmap;
+            Initialized += DifficultyBeatmapSetControl_Initialized;
+            InitializeComponent();
         }
 
-        private void InfoControl_Initialized(object? sender, EventArgs e)
+        private void DifficultyBeatmapSetControl_Initialized(object? sender, EventArgs e)
         {
-            stackPanelLabels.Visibility = Visibility.Visible;
-            stackPanelControls.Visibility = Visibility.Collapsed;
+            
         }
     }
 }
