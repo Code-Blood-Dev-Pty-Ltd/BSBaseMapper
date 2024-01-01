@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="BSBaseMapper.Controls.DifficultyBeatmapSetControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BSBaseMapper.Controls"
+             mc:Ignorable="d" 
+             d:Background="White" DataContext="{Binding RelativeSource={RelativeSource Self}}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,5,5">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Difficulty</TextBlock>
+            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Difficulty Rank</TextBlock>
+            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Beatmap File Name</TextBlock>
+            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Note Jump Movement Speed</TextBlock>
+            <TextBlock d:Foreground="Black" HorizontalAlignment="Right" Height="20" Margin="0,2,5,0" FontWeight="Bold">Note Jump Start Beat Offset</TextBlock>
+        </StackPanel>
+        <StackPanel  Grid.Column="1" Orientation="Horizontal">
+            <StackPanel x:Name="stackPanelLabels" d:Visibility="Visible" Visibility="Visible">
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="2,2,5,0" d:Text="[Difficulty]" Text="{Binding DifficultyBeatmapObject._difficulty}"></TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="2,2,5,0" d:Text="[Difficulty Rank]" Text="{Binding DifficultyBeatmapObject._difficultyRank}"></TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="2,2,5,0" d:Text="[Beatmap File Name]" Text="{Binding DifficultyBeatmapObject._beatmapFilename}"></TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="2,2,5,0" d:Text="[Note Jump Movement Speed]" Text="{Binding DifficultyBeatmapObject._noteJumpMovementSpeed}"></TextBlock>
+                <TextBlock d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="2,2,5,0" d:Text="[Note Jump Start Beat Offset]" Text="{Binding DifficultyBeatmapObject._noteJumpStartBeatOffset}"></TextBlock>
+            </StackPanel>
+            <StackPanel x:Name="stackPanelControls" d:Visibility="Visible" Visibility="Collapsed">
+                <TextBox d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="0,2,5,0" d:Text="[Difficulty]" Text="{Binding DifficultyBeatmapObject._difficulty}"></TextBox>
+                <TextBox d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="0,2,5,0" d:Text="[Difficulty Rank]" Text="{Binding DifficultyBeatmapObject._difficultyRank, StringFormat=\{0:F0\}}"></TextBox>
+                <TextBox d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="0,2,5,0" d:Text="[Beatmap File Name]" Text="{Binding DifficultyBeatmapObject._beatmapFilename}"></TextBox>
+                <TextBox d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="0,2,5,0" d:Text="[Note Jump Movement Speed]" Text="{Binding DifficultyBeatmapObject._noteJumpMovementSpeed, StringFormat=\{0:F0\}}"></TextBox>
+                <TextBox d:Foreground="Black" HorizontalAlignment="Left" Height="20" Margin="0,2,5,0" d:Text="[Note Jump Start Beat Offset]" Text="{Binding DifficultyBeatmapObject._noteJumpStartBeatOffset, StringFormat=\{0:F1\}}"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
